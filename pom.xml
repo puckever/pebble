@@ -4,7 +4,9 @@
     <groupId>org.sourceforge.pebble</groupId>
     <artifactId>pebble</artifactId>
     <packaging>war</packaging>
-    <version>2.6.6-SNAPSHOT</version>
+    <version>2.6.6-SNAPSHOT-${build.number}</version>
+
+
 
     <name>Pebble</name>
     <description>A lightweight, open source, Java EE blogging tool</description>
@@ -371,6 +373,22 @@
                         <version>1.1.2</version>
                     </dependency>
                 </dependencies>
+	    </plugin>
+	    <plugin>
+                <groupId>org.apache.Maven.plugins</groupId>
+                <artifactId>Maven-jar-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                        <manifestEntries>
+                            <Implementation-Version>${build.number}</Implementation-Version>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
