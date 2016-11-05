@@ -1,5 +1,7 @@
 # Pebble
 
+Non-breaking change
+
 The prerequisites are as follows.
 
  * Java 5.0
