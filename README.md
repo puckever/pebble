@@ -1,6 +1,6 @@
 # Pebble
 
-Non-breaking change ..
+Non-breaking change ...
 
 The prerequisites are as follows.
 
